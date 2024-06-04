@@ -17,9 +17,12 @@ class WorkTwo {
       throw new Error('b는 숫자만 입력만 가능합니다.');
     }
   }
+  add() {
+    return this._a + this._b;
+  }
 }
 
 let test = new WorkTwo(1, 2);
 console.log(test);
 
-console.log(test._a + test._b);
+console.log(test.add());
