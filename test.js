@@ -14,10 +14,9 @@ let city = zero[1].split(',');
 // let city = zero[0].split(',');
 // console.log(city);
 
-// todo-3 forEach로 문자열 모든 값 도출하기
-for (let element in zero) {
-  let a = zero[element];
-  let b = a.split(',');
-  let c = b[0];
-  console.log(c);
-}
+// todo-3 문자열에서 '지역'에 해당되는 단어만 추출
+zero.forEach((index) => {
+  let a = index.split(',');
+  let b = a[0];
+  console.log(b);
+});
