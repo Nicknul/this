@@ -9,5 +9,9 @@ let b = fs.readFileSync(csvPath, 'utf-8');
 // console.log(b);
 
 // todo-3 읽은 데이터 빈 배열에 담기;
-let c = a.push(b);
-console.log(a);
+a.push(b);
+// console.log(a);
+
+// todo-4 배열 a를 JSON로 읽기
+let d = fs.writeFileSync('./a.json', a, 'utf-8');
+console.log(d);
