@@ -5,3 +5,16 @@ function workThree(a, b) {
   return a + b;
 }
 console.log(workThree(1, 2));
+
+let itsMe = {
+  name: '정호연',
+  age: 27,
+  home: '대전',
+  test: this,
+  sentence: function () {
+    return this.name + ' 입니다.';
+  },
+};
+console.dir('객체에서 보는 this:', itsMe);
+
+console.log('메서드로 보는 this:', itsMe.sentence());
