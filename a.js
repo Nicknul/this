@@ -12,4 +12,11 @@ const data = fs.readFileSync('utf8.csv', 'utf-8');
 
 // todo-3 split를 이용하여 불 필요한 문자 지우기
 const splitData = data.split('\r\n');
-console.log(splitData);
+// console.log(splitData);
+
+// todo-4 split의 data의 배열의 값을 하나씩 나타나게 하자.
+// const city = splitData[0].split(',');
+// console.log(city);
+for (let i = 0; i < splitData.length; i++) {
+  console.log(splitData[i]);
+}
