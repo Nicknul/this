@@ -28,11 +28,30 @@ const key = splitData[0].split(',');
 // }
 
 // todo-6 빈 객체 안에 추출한 data로 key와 value로 넣어보자
+
 for (let i = 1; i < splitData.length; i++) {
   const value = splitData[i].split(',');
   const obj = {};
   for (let j = 0; j < key.length; j++) {
     obj[key[j]] = value[j];
   }
-  console.log(obj);
+  // console.log(obj);
 }
+// todo-7 가공된 데이터를 이용하여 json 파일을 생성하자
+const finish = [];
+
+for (let i = 1; i < splitData.length; i++) {
+  const value = splitData[i].split(',');
+  const obj = {};
+  for (let j = 0; j < key.length; j++) {
+    obj[key[j]] = value[j];
+  }
+  finish.push(obj);
+}
+// console.log(finish);
+
+const change = JSON.stringify(finish, null, 2);
+
+const json = fs.writeFileSync('./a.json', change, 'utf-8');
+
+console.log(json);
